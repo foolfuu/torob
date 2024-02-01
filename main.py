@@ -19,7 +19,28 @@ def Main():
         mo.title("Khayam")
         mo.resizable(False , False)
         mo.config(bg = "black")
-        a = Button(mo,text = "back",command = back).pack()
+        a = Button(mo,text = "back",font = ('Times',25),bg = '#40A2D8',fg = 'red',bd = 5,command = back).place(x = 650 , y = 480)
+        Label(mo,text = "Price",font = ("Times 14",40),bg = "black",fg = '#2780FF').place(x = 400,y = 190)
+        pri = Entry(mo,font = ("Times 14",20),bg = "#52D3D8",bd = 7);pri.place(x = 550 , y = 130)
+
+        Label(mo,text = "Asthma",font = ("Times 14",40),bg = "black",fg = '#2780FF').place(x = 340,y = 110)
+        ast = Entry(mo,font = ("Times 14",20),bg = "#52D3D8",bd = 7);ast.place(x = 550 , y = 210)
+
+        Label(mo,text = "Manufacturer",font = ("Times 14",40),bg = "black",fg = '#2780FF').place(x = 215,y = 270)
+        man = Entry(mo,font = ("Times 14",20),bg = "#52D3D8",bd = 7);man.place(x = 550 , y = 290)
+
+        Label(mo,text = "Company",font = ("Times 14",40),bg = "black",fg = '#2780FF').place(x = 290,y = 350)
+        comp = Entry(mo,font = ("Times 14",20),bg = "#52D3D8",bd = 7);comp.place(x = 550 , y = 365)
+        def checked():
+            pr = pri.get()
+            Ast = ast.get()
+            ma = man.get()
+            Comp = comp.get()
+            if len(pr) == 0 or len(Ast) == 0 or len(ma) == 0 or len(Comp) == 0 : error("Error" , "Please complete all")
+            else: back()
+
+
+        Button(mo,text = 'Add',font = ('Times 14',25),bg = 'blue',fg = '#A367B1',command = checked).place(y = 480 , x = 780)
         mo.mainloop()
 
 
