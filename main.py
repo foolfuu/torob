@@ -14,8 +14,28 @@ def error(x,y):
 
 root = Tk()
 
+
+
+
+
 #main
 def Main():
+    def Show(event):
+        if li.size() > 0:
+            itemnumber = li.curselection()
+            itemname = li.get(itemnumber)
+
+            hast.config(text = itemname)
+            a = pa1[itemname]
+            hpri.config(text = a)
+            b = pa2[a]
+            hman.config(text = b)
+            c = pa3[b]
+            hcom.config(text = c)
+        else:
+            print('None')
+
+
     def Mosh():
         def back():
             mo.destroy()
@@ -45,7 +65,7 @@ def Main():
             Comp = comp.get()
             if len(pr) == 0 or len(Ast) == 0 or len(ma) == 0 or len(Comp) == 0 : error("Error" , "Please complete all")
             else:
-                pa1[pr]=Ast
+                pa1[pr] = Ast
                 pa2[Ast] = ma
                 pa3[ma] = Comp
                 p12.append(pr)
@@ -87,6 +107,8 @@ def Main():
             Price.config(text = "Price:")
             Manuf.config(text = "Manufacturer:")
             Com.config(text = "Company:")
+            acli.config(text = "Double click on the desired item")
+            mosh.config(text = "Add item")
     def PER():
         choice= messagebox.askquestion('Language', 'are you sure ?')
         if choice == 'yes':
@@ -96,6 +118,8 @@ def Main():
             Price.config(text = "قیمت:")
             Manuf.config(text = "نام سازنده:")
             Com.config(text = "شرکت سازنده:")
+            acli.config(text = "بر روی کالای مورد نظر دابل کلیک کنید")
+            mosh.config(text = "اضافه کردن آیتم")
     #
     #
     #def color
@@ -114,6 +138,7 @@ def Main():
             hpri.config(bg = 'red',fg = 'black')
             hman.config(bg = 'red',fg = 'black')
             hcom.config(bg = 'red',fg = 'black')
+            acli.config(bg = 'red',fg = 'yellow')
     def Green():
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
@@ -129,6 +154,7 @@ def Main():
             hpri.config(bg = 'green',fg = 'red')
             hman.config(bg = 'green',fg = 'red')
             hcom.config(bg = 'green',fg = 'red')
+            acli.config(bg = 'green',fg = 'yellow')
     def Yellow():
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
@@ -144,6 +170,7 @@ def Main():
             hpri.config(bg = 'yellow',fg = 'red')
             hman.config(bg = 'yellow',fg = 'red')
             hcom.config(bg = 'yellow',fg = 'red')
+            acli.config(bg = 'yellow',fg = 'black')
     def Black():
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
@@ -159,6 +186,7 @@ def Main():
             hpri.config(bg = 'black',fg = 'red')
             hman.config(bg = 'black',fg = 'red')
             hcom.config(bg = 'black',fg = 'red')
+            acli.config(bg = 'black',fg = 'yellow')
     def Pink():
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
@@ -174,6 +202,7 @@ def Main():
             hpri.config(bg = 'pink',fg = 'red')
             hman.config(bg = 'pink',fg = 'red')
             hcom.config(bg = 'pink',fg = 'red')
+            acli.config(bg = 'pink',fg = 'yellow')
     def Blue():
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
@@ -189,6 +218,7 @@ def Main():
             hpri.config(bg = 'blue',fg = 'red')
             hman.config(bg = 'blue',fg = 'red')
             hcom.config(bg = 'blue',fg = 'red')
+            acli.config(bg = 'blue',fg = 'yellow')
 
     #end
 
@@ -217,18 +247,20 @@ def Main():
     li = Listbox(erfun,font = ("Times 14",22))
     for i in p12:
         li.insert(0,i)
+    li.bind('<Double-1>', Show)
     li.place(x = 790,y = 140,width = 290,height = 540)
     ###
 
+    acli = Label(erfun,text = 'Double click on the desired item',fg = 'yellow',bg = 'black',font = ('Times 14',15));acli.place(y = 105,x = 790)
     Name = Label(erfun,text = "Asthma:",font = ("Times 14",20),fg = "#2780FF" , bg = "black");Name.place(x = 50 , y = 100)
     Price = Label(erfun,text = "Price:",font = ("Times 14",20),fg = "#2780FF" , bg = "black");Price.place(x = 50 , y = 200)
     Manuf = Label(erfun,text = "Manufacturer:",font = ("Times 14",20),fg = "#2780FF" , bg = "black");Manuf.place(x = 50 , y = 300)
     Com = Label(erfun,text = "Company:",font = ("Times 14",20),fg = "#2780FF" , bg = "black");Com.place(x = 50 , y = 400)
 
-    hast = Label(erfun,text = 'name',font = ("Times",20),fg = 'red',bg = 'black');hast.place(y = 100 , x = 180)
-    hpri = Label(erfun,text = '20000',font = ('Times',20),fg = 'red',bg = 'black');hpri.place(y = 200 , x = 150)
-    hman = Label(erfun,text = 'erfun',font = ('Times',20),fg = 'red',bg = 'black');hman.place(y = 300 , x = 250)
-    hcom = Label(erfun,text = 'dijecala',font = ("Times",20),fg = 'red',bg = 'black');hcom.place(y = 400 , x = 200)
+    hast = Label(erfun,font = ("Times",20),fg = 'red',bg = 'black');hast.place(y = 100 , x = 180)
+    hpri = Label(erfun,font = ('Times',20),fg = 'red',bg = 'black');hpri.place(y = 200 , x = 150)
+    hman = Label(erfun,font = ('Times',20),fg = 'red',bg = 'black');hman.place(y = 300 , x = 250)
+    hcom = Label(erfun,font = ("Times",20),fg = 'red',bg = 'black');hcom.place(y = 400 , x = 200)
 
 
     erfun.mainloop()
@@ -236,7 +268,7 @@ def Main():
 
 
 def Random(b):
-    Str = ["a","b","c","d","e","f","g","h","i","j","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9","!","@","$","?"]
+    Str = ["a","b","c","d","e","f","g","h","i","j","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","2","3","4","5","6","7","8","9","!","@","$","?"]
     c = ""
     nm = random.randint(6,8)
     for i in range(nm):
