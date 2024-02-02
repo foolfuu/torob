@@ -1,6 +1,12 @@
 from tkinter import *
 from tkinter import messagebox
-p12 = ['python']
+p12 = []
+pa1 = {}
+pa2 = {}
+pa3 = {}
+#{a:b}
+#{b:c}
+#{c:d}
 import random
 
 def error(x,y):
@@ -39,6 +45,9 @@ def Main():
             Comp = comp.get()
             if len(pr) == 0 or len(Ast) == 0 or len(ma) == 0 or len(Comp) == 0 : error("Error" , "Please complete all")
             else:
+                pa1[pr]=Ast
+                pa2[Ast] = ma
+                pa3[ma] = Comp
                 p12.append(pr)
                 back()
 
