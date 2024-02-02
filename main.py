@@ -72,8 +72,10 @@ def Main():
     menubar = Menu(erfun)
     la = Label(erfun,text = "wlcome to the khayam",font = ("Times 14", 22),bg = "black",fg = "yellow");la.pack()
     Search = Entry(erfun,font  = ("Times" , 22),bd = 5,bg = "#939393",fg = "#008800");Search.place(x = 790 , y = 50)
-    lae = Button(erfun,text = "search",font = ("Times 14",20),fg = "#6C22A6",bg = "#030637");lae.place(x = 650 , y = 47)
-    mosh = Button(erfun,text = "Add item",font = ("Times 14",20),bg = "#030637",cursor = "heart",fg = '#6C22A6',command = Mosh);mosh.place(x = 570 , y = 620)
+    lae = Button(erfun,text = "search",font = ("Times 14",15),fg = "#6C22A6",bg = "#030637",bd = 7);lae.place(x = 650 , y = 47)
+    mosh = Button(erfun,text = "Add item",font = ("Times 14",20),bg = "#030637",cursor = "heart",fg = '#6C22A6',bd = 7,command = Mosh);mosh.place(x = 570 , y = 620)
+
+
     #def language
 
     def ENG():
@@ -102,67 +104,91 @@ def Main():
         if choice == 'yes':
             erfun.config(bg = "red")
             la.config(bg = "red",fg = "yellow")
-            lae.config(bg = "red",fg = "#2780FF")
+            lae.config(bg = "red")
             Name.config(bg = "red",fg = "#2780FF")
             Price.config(bg = "red",fg = "#2780FF")
             Manuf.config(bg = "red",fg = "#2780FF")
             Com.config(bg = "red",fg = "#2780FF")
-            mosh.config(bg = "yellow")
+            mosh.config(bg = "red")
+            hast.config(bg = 'red',fg = 'black')
+            hpri.config(bg = 'red',fg = 'black')
+            hman.config(bg = 'red',fg = 'black')
+            hcom.config(bg = 'red',fg = 'black')
     def Green():
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
             erfun.config(bg = "green")
             la.config(bg = "green",fg = "yellow")
-            lae.config(bg = "green",fg = "#2780FF")
+            lae.config(bg = "green")
             Name.config(bg = "green",fg = "#2780FF")
             Price.config(bg = "green",fg = "#2780FF")
             Manuf.config(bg = "green",fg = "#2780FF")
             Com.config(bg = "green",fg = "#2780FF")
-            mosh.config(bg = "red")
+            mosh.config(bg = "green")
+            hast.config(bg = 'green',fg = 'red')
+            hpri.config(bg = 'green',fg = 'red')
+            hman.config(bg = 'green',fg = 'red')
+            hcom.config(bg = 'green',fg = 'red')
     def Yellow():
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
             erfun.config(bg = "yellow")
             la.config(bg = "yellow",fg = "black")
-            lae.config(bg = "yellow",fg = "#2780FF")
+            lae.config(bg = "yellow")
             Name.config(bg = "yellow",fg = "#2780FF")
             Price.config(bg = "yellow",fg = "#2780FF")
             Manuf.config(bg = "yellow",fg = "#2780FF")
             Com.config(bg = "yellow",fg = "#2780FF")
-            mosh.config(bg = "red")
+            mosh.config(bg = "yellow")
+            hast.config(bg = 'yellow',fg = 'red')
+            hpri.config(bg = 'yellow',fg = 'red')
+            hman.config(bg = 'yellow',fg = 'red')
+            hcom.config(bg = 'yellow',fg = 'red')
     def Black():
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
             erfun.config(bg = "black")
             la.config(bg = "black",fg = "yellow")
-            lae.config(bg = "black",fg = "#2780FF")
+            lae.config(bg = "#030637")
             Name.config(bg = "black",fg = "#2780FF")
             Price.config(bg = "black",fg = "#2780FF")
             Manuf.config(bg = "black",fg = "#2780FF")
             Com.config(bg = "black",fg = "#2780FF")
-            mosh.config(bg = "red")
+            mosh.config(bg = "#030637")
+            hast.config(bg = 'black',fg = 'red')
+            hpri.config(bg = 'black',fg = 'red')
+            hman.config(bg = 'black',fg = 'red')
+            hcom.config(bg = 'black',fg = 'red')
     def Pink():
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
             erfun.config(bg = "pink")
             la.config(bg = "pink",fg = "yellow")
-            lae.config(bg = "pink",fg = "#2780FF")
+            lae.config(bg = "pink")
             Name.config(bg = "pink",fg = "#2780FF")
             Price.config(bg = "pink",fg = "#2780FF")
             Manuf.config(bg = "pink",fg = "#2780FF")
             Com.config(bg = "pink",fg = "#2780FF")
-            mosh.config(bg = "red")
+            mosh.config(bg = "pink")
+            hast.config(bg = 'pink',fg = 'red')
+            hpri.config(bg = 'pink',fg = 'red')
+            hman.config(bg = 'pink',fg = 'red')
+            hcom.config(bg = 'pink',fg = 'red')
     def Blue():
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
             erfun.config(bg = "blue")
             la.config(bg = "blue",fg = "yellow")
-            lae.config(bg = "blue",fg = "black")
+            lae.config(bg = "blue")
             Name.config(bg = "blue",fg = "black")
             Price.config(bg = "blue",fg = "black")
             Manuf.config(bg = "blue",fg = "black")
             Com.config(bg = "blue",fg = "black")
-            mosh.config(bg = "red")
+            mosh.config(bg = "blue")
+            hast.config(bg = 'blue',fg = 'red')
+            hpri.config(bg = 'blue',fg = 'red')
+            hman.config(bg = 'blue',fg = 'red')
+            hcom.config(bg = 'blue',fg = 'red')
 
     #end
 
@@ -198,6 +224,11 @@ def Main():
     Price = Label(erfun,text = "Price:",font = ("Times 14",20),fg = "#2780FF" , bg = "black");Price.place(x = 50 , y = 200)
     Manuf = Label(erfun,text = "Manufacturer:",font = ("Times 14",20),fg = "#2780FF" , bg = "black");Manuf.place(x = 50 , y = 300)
     Com = Label(erfun,text = "Company:",font = ("Times 14",20),fg = "#2780FF" , bg = "black");Com.place(x = 50 , y = 400)
+
+    hast = Label(erfun,text = 'name',font = ("Times",20),fg = 'red',bg = 'black');hast.place(y = 100 , x = 180)
+    hpri = Label(erfun,text = '20000',font = ('Times',20),fg = 'red',bg = 'black');hpri.place(y = 200 , x = 150)
+    hman = Label(erfun,text = 'erfun',font = ('Times',20),fg = 'red',bg = 'black');hman.place(y = 300 , x = 250)
+    hcom = Label(erfun,text = 'dijecala',font = ("Times",20),fg = 'red',bg = 'black');hcom.place(y = 400 , x = 200)
 
 
     erfun.mainloop()
