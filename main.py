@@ -32,8 +32,8 @@ def Main():
             hman.config(text = b)
             c = pa3[b]
             hcom.config(text = c)
-        else:
-            print('None')
+       #else:
+        #   print('None')
 
 
     def Mosh():
@@ -92,7 +92,27 @@ def Main():
     menubar = Menu(erfun)
     la = Label(erfun,text = "wlcome to the khayam",font = ("Times 14", 22),bg = "black",fg = "yellow");la.pack()
     Search = Entry(erfun,font  = ("Times" , 22),bd = 5,bg = "#939393",fg = "#008800");Search.place(x = 790 , y = 50)
-    lae = Button(erfun,text = "search",font = ("Times 14",15),fg = "#6C22A6",bg = "#030637",bd = 7);lae.place(x = 650 , y = 47)
+    def Searched():
+        pse = []
+        sa = Search.get()
+        if len(sa) == 0:
+            for i in range(li.size()):
+                li.delete(0)
+            for i in p12:
+                li.insert(0,i)
+        else:
+            for i in p12:
+                if sa in i:
+                    pse.append(i)
+            for i in range(li.size()):
+                li.delete(0)
+            if len(pse) == 0:
+                pse.append('No product found')
+            for i in pse:
+                li.insert(0,i)
+
+
+    lae = Button(erfun,text = "search",font = ("Times 14",15),fg = "#6C22A6",bg = "#030637",bd = 7,command = Searched);lae.place(x = 650 , y = 47)
     mosh = Button(erfun,text = "Add item",font = ("Times 14",20),bg = "#030637",cursor = "heart",fg = '#6C22A6',bd = 7,command = Mosh);mosh.place(x = 570 , y = 620)
 
 
