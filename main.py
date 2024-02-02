@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+p12 = ['python']
 import random
 
 def error(x,y):
@@ -37,7 +38,9 @@ def Main():
             ma = man.get()
             Comp = comp.get()
             if len(pr) == 0 or len(Ast) == 0 or len(ma) == 0 or len(Comp) == 0 : error("Error" , "Please complete all")
-            else: back()
+            else:
+                p12.append(pr)
+                back()
 
 
         Button(mo,text = 'Add',font = ('Times 14',25),bg = 'blue',fg = '#A367B1',command = checked).place(y = 480 , x = 780)
@@ -60,8 +63,8 @@ def Main():
     menubar = Menu(erfun)
     la = Label(erfun,text = "wlcome to the khayam",font = ("Times 14", 22),bg = "black",fg = "yellow");la.pack()
     Search = Entry(erfun,font  = ("Times" , 22),bd = 5,bg = "#939393",fg = "#008800");Search.place(x = 790 , y = 50)
-    lae = Label(erfun,text = "search",font = ("Times 14",20),fg = "#2780FF",bg = "black");lae.place(x = 650 , y = 50)
-    mosh = Button(erfun,text = "add moshkel",font = ("Times 14",14),bg = "red",cursor = "heart",command = Mosh);mosh.place(x = 570 , y = 620)
+    lae = Button(erfun,text = "search",font = ("Times 14",20),fg = "#6C22A6",bg = "#030637");lae.place(x = 650 , y = 47)
+    mosh = Button(erfun,text = "Add item",font = ("Times 14",20),bg = "#030637",cursor = "heart",fg = '#6C22A6',command = Mosh);mosh.place(x = 570 , y = 620)
     #def language
 
     def ENG():
@@ -177,7 +180,8 @@ def Main():
 
 
     li = Listbox(erfun,font = ("Times 14",22))
-    li.insert(1,"python")
+    for i in p12:
+        li.insert(0,i)
     li.place(x = 790,y = 140,width = 290,height = 540)
     ###
 
