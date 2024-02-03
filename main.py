@@ -25,13 +25,14 @@ def Main():
             itemnumber = li.curselection()
             itemname = li.get(itemnumber)
 
-            hast.config(text = itemname)
-            a = pa1[itemname]
-            hpri.config(text = a)
-            b = pa2[a]
-            hman.config(text = b)
-            c = pa3[b]
-            hcom.config(text = c)
+            if itemname in p12:
+                hast.config(text = itemname)
+                a = pa1[itemname]
+                hpri.config(text = a)
+                b = pa2[a]
+                hman.config(text = b)
+                c = pa3[b]
+                hcom.config(text = c)
        #else:
         #   print('None')
 
@@ -148,12 +149,12 @@ def Main():
         if choice == 'yes':
             erfun.config(bg = "red")
             la.config(bg = "red",fg = "yellow")
-            lae.config(bg = "red")
+            lae.config(bg = "#FA4659")
             Name.config(bg = "red",fg = "#2780FF")
             Price.config(bg = "red",fg = "#2780FF")
             Manuf.config(bg = "red",fg = "#2780FF")
             Com.config(bg = "red",fg = "#2780FF")
-            mosh.config(bg = "red")
+            mosh.config(bg = "#FA4659")
             hast.config(bg = 'red',fg = 'black')
             hpri.config(bg = 'red',fg = 'black')
             hman.config(bg = 'red',fg = 'black')
@@ -164,12 +165,12 @@ def Main():
         if choice == 'yes':
             erfun.config(bg = "green")
             la.config(bg = "green",fg = "yellow")
-            lae.config(bg = "green")
+            lae.config(bg = "#0D9276")
             Name.config(bg = "green",fg = "#2780FF")
             Price.config(bg = "green",fg = "#2780FF")
             Manuf.config(bg = "green",fg = "#2780FF")
             Com.config(bg = "green",fg = "#2780FF")
-            mosh.config(bg = "green")
+            mosh.config(bg = "#0D9276")
             hast.config(bg = 'green',fg = 'red')
             hpri.config(bg = 'green',fg = 'red')
             hman.config(bg = 'green',fg = 'red')
@@ -180,12 +181,12 @@ def Main():
         if choice == 'yes':
             erfun.config(bg = "yellow")
             la.config(bg = "yellow",fg = "black")
-            lae.config(bg = "yellow")
+            lae.config(bg = "#FFD124")
             Name.config(bg = "yellow",fg = "#2780FF")
             Price.config(bg = "yellow",fg = "#2780FF")
             Manuf.config(bg = "yellow",fg = "#2780FF")
             Com.config(bg = "yellow",fg = "#2780FF")
-            mosh.config(bg = "yellow")
+            mosh.config(bg = "#FFD124")
             hast.config(bg = 'yellow',fg = 'red')
             hpri.config(bg = 'yellow',fg = 'red')
             hman.config(bg = 'yellow',fg = 'red')
@@ -212,12 +213,12 @@ def Main():
         if choice == 'yes':
             erfun.config(bg = "pink")
             la.config(bg = "pink",fg = "yellow")
-            lae.config(bg = "pink")
+            lae.config(bg = "#E5A5FF")
             Name.config(bg = "pink",fg = "#2780FF")
             Price.config(bg = "pink",fg = "#2780FF")
             Manuf.config(bg = "pink",fg = "#2780FF")
             Com.config(bg = "pink",fg = "#2780FF")
-            mosh.config(bg = "pink")
+            mosh.config(bg = "#E5A5FF")
             hast.config(bg = 'pink',fg = 'red')
             hpri.config(bg = 'pink',fg = 'red')
             hman.config(bg = 'pink',fg = 'red')
@@ -228,12 +229,12 @@ def Main():
         if choice == 'yes':
             erfun.config(bg = "blue")
             la.config(bg = "blue",fg = "yellow")
-            lae.config(bg = "blue")
+            lae.config(bg = "#0766AD")
             Name.config(bg = "blue",fg = "black")
             Price.config(bg = "blue",fg = "black")
             Manuf.config(bg = "blue",fg = "black")
             Com.config(bg = "blue",fg = "black")
-            mosh.config(bg = "blue")
+            mosh.config(bg = "#0766AD")
             hast.config(bg = 'blue',fg = 'red')
             hpri.config(bg = 'blue',fg = 'red')
             hman.config(bg = 'blue',fg = 'red')
@@ -244,7 +245,7 @@ def Main():
 
     file = Menu(menubar, tearoff = 0)
     menubar.add_cascade(label = "File" , menu = file)
-    file.add_command(label = "mi")
+   #file.add_command(label = "mi")
     file.add_command(label = "Exit" , command = yes_or_no)
     #
     edit = Menu(menubar, tearoff = 0)
