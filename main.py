@@ -113,8 +113,27 @@ def Main():
                 li.insert(0,i)
 
 
-    lae = Button(erfun,text = "search",font = ("Times 14",15),fg = "#6C22A6",bg = "#030637",bd = 7,command = Searched);lae.place(x = 650 , y = 47)
+    lae = Button(erfun,text = "Search",font = ("Times 14",15),fg = "#6C22A6",bg = "#030637",bd = 7,command = Searched);lae.place(x = 650 , y = 47)
     mosh = Button(erfun,text = "Add item",font = ("Times 14",20),bg = "#030637",cursor = "heart",fg = '#6C22A6',bd = 7,command = Mosh);mosh.place(x = 570 , y = 620)
+
+    def DELETE():
+        itemnumber = li.curselection()
+        if len(itemnumber)>0:
+            choice= messagebox.askquestion('Delete', 'are you sure ?')
+            if choice == 'yes':
+                itemname=li.get(itemnumber)
+                hast.config(text = '')
+                hpri.config(text = '')
+                hman.config(text = '')
+                hcom.config(text = '')
+                a = p12.index(itemname)
+                p12.pop(a)
+                for i in range(li.size()):
+                    li.delete(0)
+                for i in p12:
+                    li.insert(0,i)
+
+    Dele = Button(erfun,text = 'Delete',font = ("Times 14",20),bg = "#030637" ,fg = '#6C22A6',bd = 7,command = DELETE);Dele.place(y = 620 , x = 430)
 
 
     #def language
