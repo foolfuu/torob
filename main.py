@@ -143,6 +143,7 @@ def Main():
         choice= messagebox.askquestion('Language', 'are you sure ?')
         if choice == 'yes':
             lae.config(text = "search")
+            Dele.config(text = 'Delete')
             la.config(text = "wlcome to the khayam")
             Name.config(text = "Asthma:")
             Price.config(text = "Price:")
@@ -154,6 +155,7 @@ def Main():
         choice= messagebox.askquestion('Language', 'are you sure ?')
         if choice == 'yes':
             lae.config(text = "سرچ")
+            Dele.config(text = 'حذف')
             la.config(text = "خوش آمدید به خیام")
             Name.config(text = "نام کالا:")
             Price.config(text = "قیمت:")
@@ -170,6 +172,7 @@ def Main():
             erfun.config(bg = "red")
             la.config(bg = "red",fg = "yellow")
             lae.config(bg = "#FA4659")
+            Dele.config(bg = '#FA4659')
             Name.config(bg = "red",fg = "#2780FF")
             Price.config(bg = "red",fg = "#2780FF")
             Manuf.config(bg = "red",fg = "#2780FF")
@@ -186,6 +189,7 @@ def Main():
             erfun.config(bg = "green")
             la.config(bg = "green",fg = "yellow")
             lae.config(bg = "#0D9276")
+            Dele.config(bg = '#0D9276')
             Name.config(bg = "green",fg = "#2780FF")
             Price.config(bg = "green",fg = "#2780FF")
             Manuf.config(bg = "green",fg = "#2780FF")
@@ -202,6 +206,7 @@ def Main():
             erfun.config(bg = "yellow")
             la.config(bg = "yellow",fg = "black")
             lae.config(bg = "#FFD124")
+            Dele.config(bg = '#FFD124')
             Name.config(bg = "yellow",fg = "#2780FF")
             Price.config(bg = "yellow",fg = "#2780FF")
             Manuf.config(bg = "yellow",fg = "#2780FF")
@@ -218,6 +223,7 @@ def Main():
             erfun.config(bg = "black")
             la.config(bg = "black",fg = "yellow")
             lae.config(bg = "#030637")
+            Dele.config(bg = '#030637')
             Name.config(bg = "black",fg = "#2780FF")
             Price.config(bg = "black",fg = "#2780FF")
             Manuf.config(bg = "black",fg = "#2780FF")
@@ -234,6 +240,7 @@ def Main():
             erfun.config(bg = "pink")
             la.config(bg = "pink",fg = "yellow")
             lae.config(bg = "#E5A5FF")
+            Dele.config(bg = '#E5A5FF')
             Name.config(bg = "pink",fg = "#2780FF")
             Price.config(bg = "pink",fg = "#2780FF")
             Manuf.config(bg = "pink",fg = "#2780FF")
@@ -250,6 +257,7 @@ def Main():
             erfun.config(bg = "blue")
             la.config(bg = "blue",fg = "yellow")
             lae.config(bg = "#0766AD")
+            Dele.config(bg = '#0766AD')
             Name.config(bg = "blue",fg = "black")
             Price.config(bg = "blue",fg = "black")
             Manuf.config(bg = "blue",fg = "black")
@@ -431,7 +439,7 @@ def vorod():
             #
 
 
-    Button(vor,text = "record",font=('Times 14' , 20),activebackground = "red",bg = "blue",command = chcked).place(y = 400,x = 465)
+    Button(vor,text = "record",font=('Times 14' , 20),activebackground = "red",bg = "black",fg = 'white',command = chcked).place(y = 400,x = 465)
 
     vor.mainloop()
 
