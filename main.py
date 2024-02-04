@@ -70,6 +70,7 @@ def Main():
                 pa2[Ast] = ma
                 pa3[ma] = Comp
                 p12.append(pr)
+                p12.sort()
                 back()
 
 
@@ -100,7 +101,7 @@ def Main():
             for i in range(li.size()):
                 li.delete(0)
             for i in p12:
-                li.insert(0,i)
+                li.insert(END,i)
         else:
             for i in p12:
                 if sa in i:
@@ -110,7 +111,7 @@ def Main():
             if len(pse) == 0:
                 pse.append('No product found')
             for i in pse:
-                li.insert(0,i)
+                li.insert(END,i)
 
 
     lae = Button(erfun,text = "Search",font = ("Times 14",15),fg = "#6C22A6",bg = "#030637",bd = 7,command = Searched);lae.place(x = 650 , y = 47)
@@ -131,7 +132,7 @@ def Main():
                 for i in range(li.size()):
                     li.delete(0)
                 for i in p12:
-                    li.insert(0,i)
+                    li.insert(END,i)
 
     Dele = Button(erfun,text = 'Delete',font = ("Times 14",20),bg = "#030637" ,fg = '#6C22A6',bd = 7,command = DELETE);Dele.place(y = 620 , x = 430)
 
@@ -286,7 +287,7 @@ def Main():
 
     li = Listbox(erfun,font = ("Times 14",22))
     for i in p12:
-        li.insert(0,i)
+        li.insert(END,i)
     li.bind('<Double-1>', Show)
     li.place(x = 790,y = 140,width = 290,height = 540)
     ###
