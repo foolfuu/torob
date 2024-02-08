@@ -120,19 +120,21 @@ def Main():
     def DELETE():
         itemnumber = li.curselection()
         if len(itemnumber)>0:
-            choice= messagebox.askquestion('Delete', 'are you sure ?')
-            if choice == 'yes':
-                itemname=li.get(itemnumber)
-                hast.config(text = '')
-                hpri.config(text = '')
-                hman.config(text = '')
-                hcom.config(text = '')
-                a = p12.index(itemname)
-                p12.pop(a)
-                for i in range(li.size()):
-                    li.delete(0)
-                for i in p12:
-                    li.insert(END,i)
+            itemname=li.get(itemnumber)
+            if itemname != "No product found":
+                choice= messagebox.askquestion('Delete', 'are you sure ?')
+                if choice == 'yes':
+                    if itemname in p12:
+                        hast.config(text = '')
+                        hpri.config(text = '')
+                        hman.config(text = '')
+                        hcom.config(text = '')
+                        a = p12.index(itemname)
+                        p12.pop(a)
+                        for i in range(li.size()):
+                            li.delete(0)
+                        for i in p12:
+                            li.insert(END,i)
 
     Dele = Button(erfun,text = 'Delete',font = ("Times 14",20),bg = "#030637" ,fg = '#6C22A6',bd = 7,command = DELETE);Dele.place(y = 620 , x = 430)
 
