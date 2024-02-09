@@ -125,6 +125,11 @@ def Main():
                 choice= messagebox.askquestion('Delete', 'are you sure ?')
                 if choice == 'yes':
                     if itemname in p12:
+                        a = pa1[itemname]
+                        b = pa2[a]
+                        del pa1[itemname]
+                        del pa2[a]
+                        del pa3[b]
                         hast.config(text = '')
                         hpri.config(text = '')
                         hman.config(text = '')
