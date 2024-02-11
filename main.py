@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+import random
 p12 = []
 pa1 = {}
 pa2 = {}
@@ -7,7 +8,6 @@ pa3 = {}
 #{a:b}
 #{b:c}
 #{c:d}
-import random
 
 def error(x,y):
     messagebox.showinfo(x , y)
