@@ -375,16 +375,16 @@ def regi():
     window.geometry("1140x700+100+50")
     window.resizable(False , False)
 
-    Label(window,text = "last name",font = ("Times 14",40),bg = "red").place(x = 300,y = 190)
+    Label(window,text = "Last name",font = ("Times 14",40),bg = "red").place(x = 300,y = 190)
     lname = Entry(window,font = ("Times 14",20));lname.place(x = 550 , y = 130)
 
-    Label(window,text = "first name",font = ("Times 14",40),bg = "red").place(x = 290,y = 110)
+    Label(window,text = "First name",font = ("Times 14",40),bg = "red").place(x = 290,y = 110)
     fname = Entry(window,font = ("Times 14",20));fname.place(x = 550 , y = 210)
 
-    Label(window,text = "password",font = ("Times 14",40),bg = "red").place(x = 300,y = 270)
+    Label(window,text = "Password",font = ("Times 14",40),bg = "red").place(x = 300,y = 270)
     passw = Entry(window,font = ("Times 14",20),show = "*");passw.place(x = 550 , y = 290)
 
-    Label(window,text = "repeat the password",font = ("Times 14",40),bg = "red").place(x = 50,y = 350)
+    Label(window,text = "Repeat the password",font = ("Times 14",40),bg = "red").place(x = 50,y = 350)
     passw2 = Entry(window,font = ("Times 14",20),show = "*");passw2.place(x = 550 , y = 365)
 
     def check():
@@ -421,13 +421,13 @@ def vorod():
     vor.resizable(False , False)
     vor.config(bg = "green")
 
-    Label(vor,text = "last name",font = ("Times 14",40),bg = "green").place(x = 300,y = 190)
+    Label(vor,text = "Last name",font = ("Times 14",40),bg = "green").place(x = 300,y = 190)
     Lname = Entry(vor,font = ("Times 14",20));Lname.place(x = 550 , y = 130)
 
-    Label(vor,text = "first name",font = ("Times 14",40),bg = "green").place(x = 290,y = 110)
+    Label(vor,text = "First name",font = ("Times 14",40),bg = "green").place(x = 290,y = 110)
     Fname = Entry(vor,font = ("Times 14",20));Fname.place(x = 550 , y = 210)
 
-    Label(vor,text = "password",font = ("Times 14",40),bg = "green").place(x = 300,y = 270)
+    Label(vor,text = "Password",font = ("Times 14",40),bg = "green").place(x = 300,y = 270)
     Passw = Entry(vor,font = ("Times 14",20),show = "*");Passw.place(x = 550 , y = 290)
 
     def chcked():
@@ -462,7 +462,7 @@ root.config(bg = "blue")
 
 
 
-Label(root,text = "Welcom",font=('Times 14' , 55),fg = "yellow",bg = "blue").place(y = 100 , x = 450)
+Label(root,text = "Welcome",font=('Times 14' , 55),fg = "yellow",bg = "blue").place(y = 100 , x = 430)
 Button(root,text = "register",font=('Times 14' , 20),activebackground = "red",bg = "green",command = regi).place(y = 200,x = 590)
 Button(root,text = " log in ",font=('Times 14' , 20),activebackground = "red",bg = "green",command = vorod).place(y = 200,x = 465)
 
