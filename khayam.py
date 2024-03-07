@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import random
+import math
 p12 = []
 pa1 = {}
 pa2 = {}
@@ -76,7 +77,7 @@ class khayam_algoritm:
     # funktion for color
 
     # def red(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli)
-    def Red(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac):
+    def Red(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac,Cl):
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
             Er.config(bg = "red")
@@ -93,8 +94,9 @@ class khayam_algoritm:
             Hm.config(bg = 'red',fg = 'black')
             Hc.config(bg = 'red',fg = 'black')
             Ac.config(bg = 'red',fg = 'yellow')
-    
-    def Green(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac):
+            Cl.config(bg = '#FA4659',fg = '#6C22A6')
+
+    def Green(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac,Cl):
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
             Er.config(bg = "green")
@@ -111,8 +113,9 @@ class khayam_algoritm:
             Hm.config(bg = 'green',fg = 'red')
             Hc.config(bg = 'green',fg = 'red')
             Ac.config(bg = 'green',fg = 'yellow')
+            Cl.config(bg = '#0D9276',fg = '#6C22A6')
 
-    def Yellow(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac):
+    def Yellow(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac,Cl):
             choice= messagebox.askquestion('color', 'are you sure ?')
             if choice == 'yes':
                 Er.config(bg = "yellow")
@@ -129,8 +132,9 @@ class khayam_algoritm:
                 Hm.config(bg = 'yellow',fg = 'red')
                 Hc.config(bg = 'yellow',fg = 'red')
                 Ac.config(bg = 'yellow',fg = 'black')
+                Cl.config(bg = '#FFD124',fg = '#6C22A6')
     
-    def Black(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac):
+    def Black(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac,Cl):
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
             Er.config(bg = "black")
@@ -147,8 +151,9 @@ class khayam_algoritm:
             Hm.config(bg = 'black',fg = 'red')
             Hc.config(bg = 'black',fg = 'red')
             Ac.config(bg = 'black',fg = 'yellow')
+            Cl.config(bg = '#610C9F',fg = '#E19898')
     
-    def Pink(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac):
+    def Pink(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac,Cl):
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
             Er.config(bg = "pink")
@@ -165,8 +170,9 @@ class khayam_algoritm:
             Hm.config(bg = 'pink',fg = 'red')
             Hc.config(bg = 'pink',fg = 'red')
             Ac.config(bg = 'pink',fg = 'yellow')
+            Cl.config(bg = '#E5A5FF',fg = '#6C22A6')
 
-    def Blue(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac):
+    def Blue(Er,La,Lae,De,Na,Pr,Ma,Co,Mo,Ha,Hp,Hm,Hc,Ac,Cl):
         choice= messagebox.askquestion('color', 'are you sure ?')
         if choice == 'yes':
             Er.config(bg = "blue")
@@ -183,9 +189,10 @@ class khayam_algoritm:
             Hm.config(bg = 'blue',fg = 'red')
             Hc.config(bg = 'blue',fg = 'red')
             Ac.config(bg = 'blue',fg = 'yellow')
+            Cl.config(bg = '#0766AD',fg = '#6C22A6')
     # funcktion for language
     # def per(lae, Dele, la, Name, Price, Manuf, Com, acli, mosh)
-    def ENG(Lae, De, La, Na, Pr, Ma, Co, Ac, Mo):
+    def ENG(Lae, De, La, Na, Pr, Ma, Co, Ac, Mo, Cl):
         choice= messagebox.askquestion('Language', 'are you sure ?')
         if choice == 'yes':
             Lae.config(text = "search")
@@ -197,8 +204,9 @@ class khayam_algoritm:
             Co.config(text = "Company:")
             Ac.config(text = "Double click on the desired item")
             Mo.config(text = "Add item")
+            Cl.config(text = "Calculator")
     
-    def PER(Lae, De, La, Na, Pr, Ma, Co, Ac, Mo):
+    def PER(Lae, De, La, Na, Pr, Ma, Co, Ac, Mo, Cl):
         choice= messagebox.askquestion('Language', 'are you sure ?')
         if choice == 'yes':
             Lae.config(text = "سرچ")
@@ -210,6 +218,7 @@ class khayam_algoritm:
             Co.config(text = "شرکت سازنده:")
             Ac.config(text = "بر روی کالای مورد نظر دابل کلیک کنید")
             Mo.config(text = "اضافه کردن آیتم")
+            Cl.config(text = "ماشین حساب")
     # def checked(mo, pri, ast, man, comp)
     def checked(a, pr, Ast, ma, co):
         def back(a):
@@ -228,21 +237,214 @@ class khayam_algoritm:
             p12.sort()
             back(a)
     # def Show(event,li, hast, hpri, hman, hcom)
-    '''
-    def Show(event):
-        if li.size() > 0:
-            itemnumber = li.curselection()
-            itemname = li.get(itemnumber)
+    # Calculator
+    
+    def CALCULATE():
+        root = Tk()
+        class add_number:
+            def n0():
+                x = sun.get()
+                if len(x) != 0: sun.insert(END,"0")
+            def n1(): sun.insert(END,"1")
+            def n2(): sun.insert(END,"2")
+            def n3(): sun.insert(END,"3")
+            def n4(): sun.insert(END,"4")
+            def n5(): sun.insert(END,"5")
+            def n6(): sun.insert(END,"6")
+            def n7(): sun.insert(END,"7")
+            def n8(): sun.insert(END,"8")
+            def n9(): sun.insert(END,"9")
+        class erfun:
+            def CE(vb):
+                x = vb.get()
+                for i in range(len(x)):
+                    vb.delete(0)
+                
+            def jam(vb):
+                x = vb.get()
+                if "+" in x or "-" in x or "*" in x or "/" in x or "**" in x: pass
+                elif len(x) == 0: pass
+                else: vb.insert(END,"+")
+            
+            def men(vb):
+                x = vb.get()
+                if "+" in x or "-" in x or "*" in x or "/" in x or "**" in x: pass
+                elif len(x) == 0: pass
+                else: vb.insert(END,"-")
 
-            if itemname in p12:
-                hast.config(text = itemname)
-                a = pa1[itemname]
-                hpri.config(text = a)
-                b = pa2[a]
-                hman.config(text = b)
-                c = pa3[b]
-                hcom.config(text = c)
-    '''
+            def zar(vb):
+                x = vb.get()
+                if "+" in x or "-" in x or "*" in x or "/" in x or "**" in x: pass
+                elif len(x) == 0: pass
+                else: vb.insert(END,"*")
+            
+            def tag(vb):
+                x = vb.get()
+                if "+" in x or "-" in x or "*" in x or "/" in x or "**" in x: pass
+                elif len(x) == 0: pass
+                else: vb.insert(END,"/")
+
+            def power(vb):
+                x = vb.get()
+                if "+" in x or "-" in x or "*" in x or "/" in x or "**" in x: pass
+                elif len(x) == 0: pass
+                else: vb.insert(END,"**")
+            
+            def Sqrt(vb):
+                x = vb.get()
+                try:
+                    if "+" in x or "-" in x or "*" in x or "/" in x: pass
+                    else:
+                        if len(x) != 0:
+                            for i in range(len(x)):
+                                vb.delete(0)
+                            a = math.sqrt(float(x))
+                            a = str(a)
+                            for i in a:
+                                vb.insert(END,i)
+                except ValueError:
+                    for i in x: vb.delete(0)
+
+            def numbersum(vb):
+                x = vb.get()
+                if len(x) != 0:
+                    ui = 0
+                    for i in x: ui += 1
+                    
+                    if x[ui-1] == "+" or x[ui-1] == "-" or x[ui-1] == "*" or x[ui-1] == "/": pass
+                    elif "+" in x or "-" in x or "*" in x or "/" in x or "**" in x:
+                        sub = vb.get()
+                        
+                        if "+" in sub:
+                            try:
+                                number1 = ''
+                                number2 = ''
+                                for i in sub:
+                                    if i != "+": number1 += i
+                                    else: break
+                                # number1 ok
+                                fg = list(sub)
+                                for i in range(len(number1)+1): fg.pop(0)
+                                for i in fg: number2 += i
+                                # number2 ok
+                                for i in sub: vb.delete(0)
+                                hasel = float(number1) + float(number2)
+                                for i in str(hasel): vb.insert(END,i)
+
+                            except ValueError:
+                                for i in sub: vb.delete(0)
+                        
+                        elif "-" in sub:
+                            try:
+                                number1 = ''
+                                number2 = ''
+                                for i in sub:
+                                    if i != "-": number1 += i
+                                    else: break
+                                # number1 ok
+                                fg = list(sub)
+                                for i in range(len(number1)+1): fg.pop(0)
+                                for i in fg: number2 += i
+                                # number2 ok
+                                for i in sub: vb.delete(0)
+                                hasel = float(number1) - float(number2)
+                                for i in str(hasel): vb.insert(END,i)
+                            except ValueError: 
+                                for i in sub: vb.delete(0)
+
+                        elif "**" in sub:
+                            try:
+                                number1 = ''
+                                number2 = ''
+                                for i in sub:
+                                    if i != "*": number1 += i
+                                    else: break
+                                # number1 ok
+                                fg = list(sub)
+                                for i in range(len(number1)+2): fg.pop(0)
+                                for i in fg: number2 += i
+                                # number2 ok
+                                for i in sub: vb.delete(0)
+                                hasel = float(number1) ** float(number2)
+                                for i in str(hasel): vb.insert(END,i)
+                            except ValueError:
+                                for i in sub: vb.delete(0)
+
+                        elif "*" in sub:
+                            try:
+                                number1 = ''
+                                number2 = ''
+                                for i in sub:
+                                    if i != "*": number1 += i
+                                    else: break
+                                # number1 ok
+                                fg = list(sub)
+                                for i in range(len(number1)+1): fg.pop(0)
+                                for i in fg: number2 += i
+                                # number2 ok
+                                for i in sub: vb.delete(0)
+                                hasel = float(number1) * float(number2)
+                                for i in str(hasel): vb.insert(END,i)
+                            except ValueError:
+                                for i in sub: vb.delete(0)
+
+                        elif "/" in sub:
+                            try:
+                                number1 = ''
+                                number2 = ''
+                                for i in sub:
+                                    if i != "/": number1 += i
+                                    else: break
+                                # number1 ok
+                                fg = list(sub)
+                                for i in range(len(number1)+1): fg.pop(0)
+                                for i in fg: number2 += i
+                                # number2 ok
+                                for i in sub: vb.delete(0)
+                                hasel = float(number1) / float(number2)
+                                for i in str(hasel): vb.insert(END,i)
+                            except ValueError:
+                                for i in sub: vb.delete(0)
+                            except ZeroDivisionError:
+                                for i in sub: vb.delete(0)
+                                vb.insert(0,"Error")
+
+        def KCE(): erfun.CE(sun)
+        def kojam(): erfun.jam(sun)
+        def kmen(): erfun.men(sun)
+        def kzar(): erfun.zar(sun)
+        def kteg(): erfun.tag(sun)
+        def kpow(): erfun.power(sun)
+        def ksqrt(): erfun.Sqrt(sun)
+        def sumer(): erfun.numbersum(sun)
+        root.title("calculaator")
+        root.geometry("280x350")
+        root.config(bg = "black")
+        root.resizable(False , False)
+        # math:
+        Button(root,text = "=",command = sumer).place(x = 219 , y = 291 , width = 60 , height = 60)
+        Button(root,text = "+",command = kojam).place(x = 219 , y = 224 , width = 60 , height = 60)
+        Button(root,text = "-",command = kmen).place(x = 219 , y = 157 , width = 60 , height = 60)
+        Button(root,text = "*",command = kzar).place(x = 219 , y = 90 , width = 60 , height = 60)
+        Button(root,text = "/",command = kteg).place(x = 219 , y = 23 , width = 60 , height = 60)
+        Button(root,text = "pow",command = kpow).place(x = 142 , y = 23 , width = 60 , height = 60)
+        Button(root,text = "sqrt",command = ksqrt).place(x = 75 , y = 23 , width = 60 , height = 60)
+        Button(root,text = "CE",command = KCE).place(x = 8 , y = 23 , width = 60 , height = 60)
+        # end math.
+        sun = Entry(root, font = ("Times 14",19),bg = "#9BA4B5");sun.pack()
+        # number:
+        Button(root,text = "0",command = add_number.n0).place(x = 8 , y = 291 , width = 60 , height = 60)
+        Button(root,text = "1",command = add_number.n1).place(x = 8 , y = 224 , width = 60 , height = 60)
+        Button(root,text = "2",command = add_number.n2).place(x = 75 , y = 224 , width = 60 , height = 60)
+        Button(root,text = "3",command = add_number.n3).place(x = 142 , y = 224 , width = 60 , height = 60)
+        Button(root,text = "4",command = add_number.n4).place(x = 8 , y = 157 , width = 60 , height = 60)
+        Button(root,text = "5",command = add_number.n5).place(x = 75 , y = 157 , width = 60 , height = 60)
+        Button(root,text = "6",command = add_number.n6).place(x = 142 , y = 157 , width = 60 , height = 60)
+        Button(root,text = "7",command = add_number.n7).place(x = 8 , y = 90 , width = 60 , height = 60)
+        Button(root,text = "8",command = add_number.n8).place(x = 75 , y = 90 , width = 60 , height = 60)
+        Button(root,text = "9",command = add_number.n9).place(x = 142 , y = 90 , width = 60 , height = 60)
+        # end nuber.
+        root.mainloop()
 
 
 
@@ -389,10 +591,15 @@ class khayam_page:
         #
         def searcher(): khayam_algoritm.Searched(Search.get(),li)
         def DELETED(): khayam_algoritm.DELETE(li, hast, hpri, hman, hcom)
+        def help_calcultor():
+            choice= messagebox.askquestion('calculator', 'are you sure ?')
+            if choice == 'yes':
+                khayam_algoritm.CALCULATE()
         #
         lae = Button(erfun,text = "Search",font = ("Times 14",15),fg = "#6C22A6",bg = "#030637",bd = 7,command = searcher);lae.place(x = 650 , y = 47)
         mosh = Button(erfun,text = "Add item",font = ("Times 14",20),bg = "#030637",cursor = "heart",fg = '#6C22A6',bd = 7,command = Mosh);mosh.place(x = 570 , y = 620)
         Dele = Button(erfun,text = 'Delete',font = ("Times 14",20),bg = "#030637" ,fg = '#6C22A6',bd = 7,command = DELETED);Dele.place(y = 620 , x = 430)
+        calcu = Button(erfun,text = "Calculator",font = ("Times 14",20),bg = "#610C9F",fg = "#E19898",bd = 7,command = help_calcultor);calcu.place(x = 250 , y = 620)
         Search = Entry(erfun,font  = ("Times" , 22),bd = 5,bg = "#939393",fg = "#008800");Search.place(x = 790 , y = 50)
         #
 
@@ -443,32 +650,32 @@ class khayam_page:
         edit = Menu(menubar, tearoff = 0)
         menubar.add_cascade(label = "Edit" , menu = edit)
         
-        def color_black(): khayam_algoritm.Black(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli)
+        def color_black(): khayam_algoritm.Black(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli, calcu)
         edit.add_command(label = "black",command = color_black)
         
-        def color_red(): khayam_algoritm.Red(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli)
+        def color_red(): khayam_algoritm.Red(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli, calcu)
         edit.add_command(label = "red",command = color_red)
         
-        def color_green(): khayam_algoritm.Green(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli)
+        def color_green(): khayam_algoritm.Green(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli, calcu)
         edit.add_command(label = "green",command = color_green)
         
-        def color_yellow(): khayam_algoritm.Yellow(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli)
+        def color_yellow(): khayam_algoritm.Yellow(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli, calcu)
         edit.add_command(label = "yellow",command = color_yellow)
         
-        def color_pink(): khayam_algoritm.Pink(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli)
+        def color_pink(): khayam_algoritm.Pink(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli, calcu)
         edit.add_command(label = "pink",command = color_pink)
         
-        def color_blue(): khayam_algoritm.Blue(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli)
+        def color_blue(): khayam_algoritm.Blue(erfun, la, lae, Dele, Name, Price, Manuf, Com, mosh, hast, hpri, hman, hcom, acli, calcu)
         edit.add_command(label = "blue",command = color_blue)
         
         erfun.config(menu = menubar)
         #
         lan = Menu(menubar, tearoff = 0)
         menubar.add_cascade(label = "Language" , menu = lan)
-        def language_english(): khayam_algoritm.ENG(lae, Dele, la, Name, Price, Manuf, Com, acli, mosh)
+        def language_english(): khayam_algoritm.ENG(lae, Dele, la, Name, Price, Manuf, Com, acli, mosh, calcu)
         lan.add_command(label = "English",command = language_english)
         
-        def language_persian(): khayam_algoritm.PER(lae, Dele, la, Name, Price, Manuf, Com, acli, mosh)
+        def language_persian(): khayam_algoritm.PER(lae, Dele, la, Name, Price, Manuf, Com, acli, mosh, calcu)
         lan.add_command(label = "Persian", command = language_persian)
             ###
         erfun.mainloop()
