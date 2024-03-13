@@ -528,7 +528,7 @@ class khayam_page:
     
     def robat():
         ro = Tk()
-        ro.title("I am Nat Robat Test")
+        ro.title("I am Not Robat Test")
         ro.config(bg = "black")
         ro.geometry("1140x700+100+50")
         ro.resizable(False , False)
